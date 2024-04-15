@@ -1,1 +1,36 @@
 
+\documentclass[sigconf]{acmart}
+
+\begin{document}
+
+\title{Analyzing Machine learning algorithms implemented in R to accurately predict financial market trends.}
+\author{Aryaman Chhikara}
+\affiliation{%
+  \institution{University of North Alabama }
+}
+\email{achhikara@una.edu}
+
+\begin{abstract}
+Your abstract here.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+The stock market is a huge contributor to how we see the world economy. It is the distinguishing factor about if the country is doing good economically or not and what the future holds for the that country. A stock market provides a venue for investors to participate in buying and selling shares of a company they want to be a part of or contribute towards the work that they create for the consumers throughout the country or around the world. Since the stock markets go through heavy traffic, they are met with these huge cycle of investments which can happen anytime for a particular company or even an index fund. Those huge investment cycles are great money-making opportunities for big banks and hedge funds around the world. Sometimes even retail investors come out making a good chunk of profit. These huge investment cycles are termed as financial trends. They become so widespread due to the media coverage that at some point people who are not even investors know what the share price of the company’s share. 
+With the rise in technology for machine learning and statistical computing. It is now becoming a possibility to start capturing an idea of how these trends might flow. These trends occur in all the sectors of stock market. From financial sectors to information technology. Each sector has its own frequency and configuration. For example, forex trends will work in a different way compared to information and technology trends. This is where it is essential to pick which sector the investor would want to target. The analysis would differ from each sector to another but will have similar components.
+
+
+\section{Background}
+Your background information here.
+
+\section{Methodology}
+Your methodology description here.
+
+\section{Results}
+Your results presentation here.
+
+\section{Future Work}
+Your future work discussion here.
+
+\end{document}
