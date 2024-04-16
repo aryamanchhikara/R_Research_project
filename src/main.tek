@@ -11,7 +11,13 @@
 \email{achhikara@una.edu}
 
 \begin{abstract}
-Your abstract here.
+This paper presents a comprehensive analysis of stock market trends dereived using machine learning algorithms. Traditional methods for predicting stock market trends have certain limitations when it comes to handling the complexity and volatility of the stock markets. This is an area where machine learning techniques offer a promising approach by analyzing patterns that occur over a series of time in the financial markets and different financial sectors of the market.
+
+This paper focuses on using a range of machine learning algorithms, including vector machines, random forests, and recurrent neural networks, to analyze historical stock data and predict future financial trends. We evaluate the performance of these algorithms using a variety of metrics, considering both accuracy and robustness in various stock market conditions.
+
+This paper also analyzes the impact of different feature selection methods and data pre-processing techniques on the predictive capabilities of the models. Through experimentation and a deep analysis, we identify key factors that contribute to the effectiveness of machine learning based financial trend analysis.
+
+The findings presented show the potential of machine learning in enhancing decision-making processes and risk assessment strategies for investors and financial analysts. By providing insi
 \end{abstract}
 
 \maketitle
