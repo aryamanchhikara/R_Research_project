@@ -1,4 +1,3 @@
-
 \documentclass[sigconf]{acmart}
 
 \begin{document}
@@ -17,18 +16,35 @@ This paper focuses on using a range of machine learning algorithms, including ve
 
 This paper also analyzes the impact of different feature selection methods and data pre-processing techniques on the predictive capabilities of the models. Through experimentation and a deep analysis, we identify key factors that contribute to the effectiveness of machine learning based financial trend analysis.
 
-The findings presented show the potential of machine learning in enhancing decision-making processes and risk assessment strategies for investors and financial analysts. By providing insi
+The findings presented show the potential of machine learning in enhancing decision-making processes and risk assessment strategies for investors and financial analysts. By providing insights into market dynamics and predicting trends with improved accuracy, The use of the machine learning algorithms can expand the stakeholders approach to have a very thorough risk analysis which allows them to lower their losses and make smarter decions in the situation of uncertain events.
+
+Keywords: Stock market analysis, Machine learning algorithms, Data Science,Financial trend prediction, Feature selection, Data preprocessing.
+
+
 \end{abstract}
 
 \maketitle
 
 \section{Introduction}
-The stock market is a huge contributor to how we see the world economy. It is the distinguishing factor about if the country is doing good economically or not and what the future holds for the that country. A stock market provides a venue for investors to participate in buying and selling shares of a company they want to be a part of or contribute towards the work that they create for the consumers throughout the country or around the world. Since the stock markets go through heavy traffic, they are met with these huge cycle of investments which can happen anytime for a particular company or even an index fund. Those huge investment cycles are great money-making opportunities for big banks and hedge funds around the world. Sometimes even retail investors come out making a good chunk of profit. These huge investment cycles are termed as financial trends. They become so widespread due to the media coverage that at some point people who are not even investors know what the share price of the company’s share. 
-With the rise in technology for machine learning and statistical computing. It is now becoming a possibility to start capturing an idea of how these trends might flow. These trends occur in all the sectors of stock market. From financial sectors to information technology. Each sector has its own frequency and configuration. For example, forex trends will work in a different way compared to information and technology trends. This is where it is essential to pick which sector the investor would want to target. The analysis would differ from each sector to another but will have similar components.
+The stock market is a huge contributor to how we see the world economy. It is the distinguishing factor about if the country is doing good economically or not and what the future holds for the that country. A stock market provides a venue for investors to participate in buying and selling shares of a company they want to be a part of or contribute towards the work that they create for the consumers throughout the country or around the world. Since the stock markets go through heavy traffic, they are met with this huge cycle of investments which can happen anytime for a particular company or even an index fund. Those huge investment cycles are great money-making opportunities for big banks and hedge funds around the world. Sometimes even retail investors come out making a good chunk of profit. These huge investment cycles are termed as financial trends. They become so widespread due to the media coverage that at some point people who are not even investors know what the share price of the company’s share. 
+With the rise in technology for machine learning and statistical computing. It is now becoming a possibility to start capturing an idea of how these trends might flow. These trends occur in all the sectors of stock market. From financial sectors to information technology. Each sector has its own frequency and configuration. For example, forex trends will work in a different way compared to information and technology trends. This is where it is essential to pick which sector the investor would want to target. The analysis would differ from each sector to another but will have similar components. Different machine learning algorithms will be used depending on which sector is picked 
+This paper takes a dive in the methodology of how to perform analysis for predicting the financial market trends and compares how different machine learning algorithms can be used for maximum efficiency depending on the scenario. The programming language used will be R. Programming language R is a statistical and graphical computing. The two primary machine learning algorithms used for this analysis are ARIMA and LSTM. ARIMA stands for Autoregressive Integrated Moving Average and is an algorithm which is used for forecasting or predicting future outcomes based on a historical series of time. LSTM is a machine learning algorithm which stands for Long Short Term Memory network, LSTM is considered a recurrent neural network or RNN and is widely used in deep learning.
 
 
 \section{Background}
-Your background information here.
+Different market sectors work with some different rules. It is unique among fnancial markets that they are open open 24 hours a day, five days a week, apart from on weekends. The voltility of those markets also differ from different markets, for example, Unlike stocks, the forex market is one of the most sophisticated markets due to its high volatility, highly nonlinear, and inconsistency[3]. Making it very difficult to predict and analyze. This is a scenario where the need for a statistical programming language arises. Languages like R allow us to perform analysis on such data where maximum volatily and infrequency is expected.  
+\subsection{Historical Background} 
+Programming language R is a scripting language which is used for statistical data manipulation and analysis. It was inspired by, and is mostly compatible with, the statistical language S developed by AT&T. The name S, for statistics, was an allusion to another programming language with a one-letter name developed at AT&T—the famous C language. S later was sold to a small firm, which added a graphical user interface (GUI) and named the result S-Plus[2]. R is primarily designed for statistical analysis, and it also offers a diverse set of graphics to demonstrate the analysis that is conducted. R also offers different data structures that can be utilized to manage data and manipulate data allowing for better efficiency throughout the analysis. With a very diverse set of packages and libraries R offers more ways to analyze data and also helps in generating new data and metrics. These factors allow R to provide its users to create a custom workflow. These features allow for an effective analysis with machine learning algorithms. 
+
+\subsection{Language overview} 
+\large \textbf{Syntax}\\
+R uses the functional programming paradigm allowing objects to be treated as first class objects allowing functions to be passed as arguments to another functions. for example, the following image shows how to use a fucntion in R to check if number is divisible or not:
+\begin{figure}[htbp]
+ 
+  \includegraphics[width=0.5\textwidth]{Rsynatxforfunctions.png}
+  \caption{function to check divisibility in R}
+\end{figure}
+
 
 \section{Methodology}
 Your methodology description here.
@@ -39,4 +55,11 @@ Your results presentation here.
 \section{Future Work}
 Your future work discussion here.
 
+\section{References}
+1. Kaelen Medeiros. 2018. R programming fundamentals: Deal with data using various modeling techniques, Birmingham: Packt. \\
+\\
+2. https://www.r-project.org/other-docs.html \\
+\\
+3. MATLOFF, N. S. Art of R programming / Norman Matloff. [s. l.]: No Starch Press, 2011. Disponível em: https://research.ebsco.com/linkprocessor/plink?id=5c2c7c1d-eef3-34fa-8716-c6ce888ab86e. Acesso em: 16 abr. 2024.\\
+\\
 \end{document}
