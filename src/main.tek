@@ -10,15 +10,15 @@
 \email{achhikara@una.edu}
 
 \begin{abstract}
-This paper presents a comprehensive analysis of stock market trends dereived using machine learning algorithms. Traditional methods for predicting stock market trends have certain limitations when it comes to handling the complexity and volatility of the stock markets. This is an area where machine learning techniques offer a promising approach by analyzing patterns that occur over a series of time in the financial markets and different financial sectors of the market.
+This paper presents a comprehensive analysis of stock market trends derived using machine learning algorithms. Traditional methods for predicting stock market trends have certain limitations when it comes to handling the complexity and volatility of the stock markets. This is an area where machine learning techniques offer a promising approach by analyzing patterns that occur over a series of time in the financial markets and different financial sectors of the market.
 
 This paper focuses on using a range of machine learning algorithms, including vector machines, random forests, and recurrent neural networks, to analyze historical stock data and predict future financial trends. We evaluate the performance of these algorithms using a variety of metrics, considering both accuracy and robustness in various stock market conditions.
 
 This paper also analyzes the impact of different feature selection methods and data pre-processing techniques on the predictive capabilities of the models. Through experimentation and a deep analysis, we identify key factors that contribute to the effectiveness of machine learning based financial trend analysis.
 
-The findings presented show the potential of machine learning in enhancing decision-making processes and risk assessment strategies for investors and financial analysts. By providing insights into market dynamics and predicting trends with improved accuracy, The use of the machine learning algorithms can expand the stakeholders approach to have a very thorough risk analysis which allows them to lower their losses and make smarter decions in the situation of uncertain events.
+The findings presented show the potential of machine learning in enhancing decision-making processes and risk assessment strategies for investors and financial analysts. By providing insights into market dynamics and predicting trends with improved accuracy, The use of the machine learning algorithms can expand the stakeholders approach to have a very thorough risk analysis which allows them to lower their losses and make smarter decisions in the situation of uncertain events.
 
-Keywords: Stock market analysis, Machine learning algorithms, Data Science,Financial trend prediction, Feature selection, Data preprocessing.
+Keywords: Stock market analysis, Machine learning algorithms, Data Science,Financial trend prediction, Feature selection, Data prepossessing.
 
 
 \end{abstract}
@@ -32,34 +32,196 @@ This paper takes a dive in the methodology of how to perform analysis for predic
 
 
 \section{Background}
-Different market sectors work with some different rules. It is unique among fnancial markets that they are open open 24 hours a day, five days a week, apart from on weekends. The voltility of those markets also differ from different markets, for example, Unlike stocks, the forex market is one of the most sophisticated markets due to its high volatility, highly nonlinear, and inconsistency[3]. Making it very difficult to predict and analyze. This is a scenario where the need for a statistical programming language arises. Languages like R allow us to perform analysis on such data where maximum volatily and infrequency is expected.  
+Different market sectors work with some different rules. It is unique among financial markets that they are open open 24 hours a day, five days a week, apart from on weekends. The volatility of those markets also differ from different markets, for example, Unlike stocks, the forex market is one of the most sophisticated markets due to its high volatility, highly nonlinear, and inconsistency[3]. Making it very difficult to predict and analyze. This is a scenario where the need for a statistical programming language arises. Languages like R allow us to perform analysis on such data where maximum volatility and infrequency is expected.  
 \subsection{Historical Background} 
-Programming language R is a scripting language which is used for statistical data manipulation and analysis. It was inspired by, and is mostly compatible with, the statistical language S developed by AT&T. The name S, for statistics, was an allusion to another programming language with a one-letter name developed at AT&T—the famous C language. S later was sold to a small firm, which added a graphical user interface (GUI) and named the result S-Plus[2]. R is primarily designed for statistical analysis, and it also offers a diverse set of graphics to demonstrate the analysis that is conducted. R also offers different data structures that can be utilized to manage data and manipulate data allowing for better efficiency throughout the analysis. With a very diverse set of packages and libraries R offers more ways to analyze data and also helps in generating new data and metrics. These factors allow R to provide its users to create a custom workflow. These features allow for an effective analysis with machine learning algorithms. 
+Programming language R is a scripting language which is used for statistical data manipulation and analysis. It was inspired by, and is mostly compatible with, the statistical language S developed by AT&T. The name S,for statistics, was an allusion to another programming language with a one-letter name developed at AT&T—the famous C language. S later was sold to a small firm, which added a graphical user interface (GUI) and named the result S-Plus[2]. R is primarily designed for statistical analysis, and it also offers a diverse set of graphics to demonstrate the analysis that is conducted. R also offers different data structures that can be utilized to manage data and manipulate data allowing for better efficiency throughout the analysis. With a very diverse set of packages and libraries R offers more ways to analyze data and also helps in generating new data and metrics. These factors allow R to provide its users to create a custom workflow. These features allow for an effective analysis with machine learning algorithms. \\
 
 \subsection{Language overview} 
 \large \textbf{Syntax}\\
-R uses the functional programming paradigm allowing objects to be treated as first class objects allowing functions to be passed as arguments to another functions. for example, the following image shows how to use a fucntion in R to check if number is divisible or not:
+R programming language was introduced in 1992. The syntax for the language is straightforward. Variables in R are used to store data. A variable can store letters,numbers,periods and underscores. A variable can assigned by using the "<-" or "=" operator.
+
 \begin{figure}[htbp]
- 
+  \includegraphics[width=0.5\textwidth]{variable.png}
+  \caption{assigning a value to a variable}
+\end{figure}
+
+R provides some built in data structures like vectors which are one dimension arrays that are created using 'C()' function[2].
+One very useful built-in data structure for statistical analysis is data frames which comes built in with R. Data frames are tabular data structures which consist of rows and columns. they are similar to a spreadsheet. Some other built-in data structures are matrices and lists[2].
+
+R also shares some concepts of oops and provides its users to write functions. These functions can be used to re-usability of code. Functions can be defined by using the 'function
+()' keyword. For example see figure 2
+
+
+\begin{figure}[htbp]
+  \includegraphics[width=0.5\textwidth]{function.png}
+  \caption{defining a function to multiply two numbers}
+\end{figure}
+
+The syntax for R has not changed much since it has been in use since 1992. The simple and convenient syntax for this language makes it a suitable choice for beginners and expert programmers.Grasping the concept behind the syntax for R allows the analyst to be more effective during the analysis giving them power to writing the exact parameters needed to get the most accurate analysis.
+
+\large \textbf{Semantics}\\
+R uses the functional programming paradigm allowing objects to be treated as first class objects allowing functions to be passed as arguments to another functions[2]. for example, the following image shows how to use a function in R to check if number is divisible or not:
+\begin{figure}[htbp]
   \includegraphics[width=0.5\textwidth]{Rsynatxforfunctions.png}
   \caption{function to check divisibility in R}
 \end{figure}
 
+R is not considered to be a pure object oriented programming langauge(OOP) because it was initially not designed as an OOP language [3]. It was only intended for statistical computing and data analysis. However using the s3 and s4 object system. The 
+s3 and s4 software are used for implementing functional object oriented programming in R [2]. S3 technology makes possible the development of objects which are related to their respective classes and functions. Whereas s4 provides the technology which allows for inheritance and formal class definitions [2].See figure 4 for an example demonstrating OOP functionality in R.  
+\\
+
+
+\begin{figure}[htbp]
+  \includegraphics[width=0.5\textwidth]{Rsynatxforfunctions.png}
+  \caption{example demonstrating OOP}
+\end{figure}
+
+\subsection{Design Implementation} 
+R is a powerful tool for data science and statistics. It performs very effectively on very complex data sets thanks to the effective design implementation. \\
+\large \textbf{Naming}\\
+The variable names are case sensitive. CamelCase is recommended.\\ 
+\large \textbf{Binding}\\
+Lexical scoping is used by R and they are resolved depends on the environment they are defined. Meaning functions defined within another function have access to variables defined outer function.\\
+\large \textbf{Scope}\\
+R has both local and global scope. Variables that are defined within a function are local to that function and variables that are defined outside the function are accessible to all the methods.\\
+\large \textbf{Control Structure}\\
+R includes 'if-else' statements , 'for' loops, 'while' loops, and repeat loops for flow control.\\
+\large \textbf{Abstract data type (ADT's)}\\
+includes built-in data structures like 'matrices' , 'vectors' and 'data frames' which allows for efficient data flow and data manipulation.\\
+\large \textbf{Concurrency}\\
+R does not have built-in support for concurrency or parallelism. However, packages like 'parallel' and 'foreach' provide functionality for parallel processing, enabling concurrent execution of code on multi core systems.
+
+\subsection{Literature Review}
+R is a very powerful tool which performs very proficiently at a scale allowing organizations or individuals conduct accurate analysis on the given data.Since R is feature rich and includes a lot of high accuracy tools within it, it becomes the best choice for conducting high level statistical analysis on any data set. Financial markets tend to be tricky when it comes to analyzing their pattern. That is where machine learning algorithms help. With the advancement in machine learning, algorithms like LSTM and ARIMA can be implemented in R allowing for a very good structure, which leads to accurate analysis of financial trends. LSTM and ARIMA have a very different approach and strategy when it comes to analyzing pattern. Both are effective in their own way. Financial sectors like foreign exchange operate at a higher frequency rate than the usual markets and they operate 24hours a day[4].\\
+\large \textbf{Artificial neural network}\\
+An artificial neural network learns by passing the data through nodes by using a corrective feedback loop which allows the data to flow through an input and an output node[7]. This concept in neural network is called Backpropagation.
+\begin{figure}[htbp]
+  \includegraphics[width=0.5\textwidth]{backpropagation.png}
+  \caption{formula for backpropagation}
+\end{figure}
+
+It works by first passing the the input data through the neural network and each layer generates a calculation that is moved to the output layer.This process is called forward pass. After the output is generated, a loss function is used to calculate the difference between the predicted output and the actual output. once error is calculated, the algorithm starts to work backwards to calculate the gradient with of the loss function with respect to their weights, this is called backpropagation and after this process the weights of the network are update by gradient descent. These processes are repeated for a fixed number of intervals until a satisfactory solution is reached.\\
+\\
+\large \textbf{Long Short Term Memory(LSTM)}\\
+An LSTM model network is a Recurrent neural network(RNN).It is used to handle and process sequential data. It consists of LSTM cells and each of those cells consist 3 gates input, output and forget gates that are used to control the flow of the gates [8].
+\begin{figure}[htbp]
+  \includegraphics[width=0.5\textwidth]{lstm.png}
+  \caption{Structure of a LSTM model}
+\end{figure}
+
+LSTM works by processing sequential data by taking input sequences and producing output sequences.Each is processed one time, this is called sequential data processing. Each model has a memory cell which stores data for a long time. These memory cells give data to three gates. Input gates decide which information form the current input should be stored in the memory cell It computes a vector containing values between 0 and 1, indicating the importance of each input. The forget gate determines which information from the previous state of the memory cell should be forgotten or discarded. It computes a vector containing values between 0 and 1, where 0 means "completely forget" and 1 means "completely remember".The output gate determines which information from the memory cell should be output to the next layer or the final output of the LSTM. It computes a vector containing values between 0 and 1, indicating the relevance of each memory cell.The memory cell maintains a cell state, which is updated over time based on the input, forget, and output gates. The cell state acts as a conveyor belt, allowing information to flow across different time steps while selectively retaining or discarding information.The update equations of an LSTM govern how the gates and memory cell state are computed. These equations involve various activation functions and weight matrices, which are learned during the training process using backpropagation through time (BPTT).During training, the parameters of the LSTM (including the weights and biases of the gates) are optimized to minimize a loss function, typically using gradient-based optimization techniques such as stochastic gradient descent (SGD) or Adam.\\
+\\
+\large \textbf{Autoregressive integrated moving average
+(ARIMA)}\\
+ARIMA is a statistical model which is autoregressive while it predicts future values based on values recorded in the past. For example, an ARIMA model can be helpful to analyze and predict the price of a share on the stock market based on the history of trading prices for that share[9].
+\begin{figure}[htbp]
+  \includegraphics[width=0.5\textwidth]{arima.png}
+  \caption{Structure of an ARIMA model}
+\end{figure}
+
+It uses the time series forecasting method which includes autoregression(AR), differencing(i) and moving average(MA) [9]. 
+First, in autoregression we will use the past values to predict the future values and 'p' is used to show how many lagged operation are present in the model. this process is termed as 'AR' The differencing makes the time series stationary by removing trends or seasonality. 'd' is the number of differencing steps. This is called integration(I).Now, moving average predicts future values based on past forecast errors. 'q' represents the number of lagged forecast errors included, which is called 'MA'. After these processes are completed the 'p','q' and 'd' values are determined using ACF which  helps determine the 'q' parameter (moving average order), while the PACF plot helps determine the 'p' parameter (autoregressive order). The order of differencing 'd' is determined based on whether the time series is stationary or requires differencing.
 
 \section{Methodology}
-Your methodology description here.
+\subsection{Input Values }
+To start performing the analysis, first we need to fit the model with the input values which in this scenario is a .csv file. For this analysis the data set of IBM share price values is used [11]. The data set contains share prices of the IBM stock and because ARIMA model and LSTM model both work on historical data, this data will be used to fit into the model to conduct further analysis.
+\begin{figure}[htbp]
+  \includegraphics[width=0.5\textwidth]{InputData.png}
+  \caption{Input values of IBM prices }
+\end{figure}
+\\
+\subsection{LSTM model}
+An LSTM model is a Recurrent nueral network model which sends data through a network of nodes which are connected with a corrective feedback loop. Then the gradient is calculated with respect to the error and the values are calculated. First we will start with fitting the data into the LSTM model.
+
+\begin{figure}[htbp]
+  \includegraphics[width=0.5\textwidth]{lstmModel.png}
+  \caption{Fitting data in LSTM model }
+\end{figure}
+
+After the data has been fit into the model the data is trained. 
+
+\begin{figure}[htbp]
+  \includegraphics[width=0.5\textwidth]{lstmTraining.png}
+  \caption{training data in LSTM model }
+\end{figure}
+
+once the data is trained it is plotted using the 'plot()' function in R. The results for this model are in section results.
+
+\subsection{ARIMA model}
+An ARIMA model is an Autoregressive model and predicts values based on the previous history of the data that is provided. This makes the ARIMA model the perfect fit for predicting share values because there is all the share price history present in the data set. We start by fitting the data into the ARIMA model.\\
+\begin{figure}[htbp]
+  \includegraphics[width=0.5\textwidth]{arimamodel.png}
+  \caption{training data in ARIMA model }
+\end{figure}
+\\
+After the input values are trained, the values are added to the ARIMA model to be further processed so that they can be moved forward and fitted into the ARIMA model to start conducting analysis.\\
+\begin{figure}[htbp]
+  \includegraphics[width=0.5\textwidth]{TrainingArima.png}
+  \caption{fitting training data in ARIMA model }
+\end{figure}
+
+Once all this process is completed, the ARIMA network starts calculating the desired outputs by using the AR-I-MA method which stands for autoregression then starts integration and then calculated the Moving Average to get the desired output.\\
+Both models have high accuracy and are very sophisticated models to conduct statistical analysis. The ARIMA model tends to be more accurate when the parameters are based on historical data.
+\\
 
 \section{Results}
-Your results presentation here.
+The research was conducted using the IBM data set that contained the share prices of the IBM shares.The data set contains the date, close/last , the volume and the highest value and the open and close value of the IBM share. the ARIMA models conducts its calculation based on the previous data very accurately and according to the findings it turned to be more efficient than LSTM [11].
+
+\begin{figure}[htbp]
+  \includegraphics[width=0.5\textwidth]{ArimaPrediction.png}
+  \caption{Prediction with ARIMA model }
+\end{figure}
+
+\\
+\begin{figure}[htbp]
+  \includegraphics[width=0.5\textwidth]{lstmPrediction.png}
+  \caption{Prediction with LSTM model }
+\end{figure}
+
+Based on these prediction ARIMA is 3.4 times better Thank LSTM when compared together based on the 30 day period analysis on the data set[11].\\
+
+Both models tend to perform better when a clean data set is provided. It is clear that the LSTM model had a little difficulty to learn and it did now really learn from the data provided. Whereas ARIMA was able to capture the frequencies and was able to compile results that were successfully able to predict the pattern which is represented in figure 13. This gives an idea of how much more accurate ARIMA model can be when performing prediction analysis of financial markets. This methodology can be used to predict any financial trend given there  is a clean dataset available.\\ 
+
+\begin{figure}[htbp]
+  \includegraphics[width=0.5\textwidth]{Arimazoomed.png}
+  \caption{Prediction with ARIMA model(zoomed) }
+\end{figure}
 
 \section{Future Work}
-Your future work discussion here.
+This analysis provides the big picture of how valuable statistical analysis can be especially when paired with machine learning to perform financial analysis and analyze financial trends.The performance analysis for both models ARIMA and LSTM was able to capture that the ARIMA model does a better job at learning from a data set that is provided by 3 times.That leaves room for improvement in the area of LSTM financial analysis.  
+
+this study, opens a floor for discussion on why LSTM models may have some difficulty in training the data and then learning from that data that is provided to it. Financial analysis is a major component when it comes to making strategies for banks and hedge funds around the globe. Some might start research on how they can improve the efficiency of LSTM networks and make them more efficient over time. Various other languages can be used to conduct this analysis, but R comes with advantages in syntax and semantics and performance which allows for more accurate prediction. 
+
+There might be a possibility where a research evolves to see if doing trend analysis is even worth it for certain big corporations or not. Since not all investors want to go really deep into statistics if they do have anything to gain out of it. At the same time, these analysis can act as a great risk assessment tools for individuals or corporations who invest huge amounts of money into the stock markets, this can allow them to simulate how the markets might act in the future and they can run their strategies against those simulations to see of that strategy is going to be worth implementing or not.
+In the future there might be a way where we can start predicting the sentiment of the market by analyzing how the markets start falling into these trend cycles and what switches the opinion of the market to other companies.It can be achieved with more advancements in machine learning technologies. Most importantly the efficeiency issues in the machine learning languages today also motivates programmers make these technologies more effective.
+\\
+\\
+\\
+
 
 \section{References}
+
 1. Kaelen Medeiros. 2018. R programming fundamentals: Deal with data using various modeling techniques, Birmingham: Packt. \\
 \\
 2. https://www.r-project.org/other-docs.html \\
 \\
 3. MATLOFF, N. S. Art of R programming / Norman Matloff. [s. l.]: No Starch Press, 2011. Disponível em: https://research.ebsco.com/linkprocessor/plink?id=5c2c7c1d-eef3-34fa-8716-c6ce888ab86e. Acesso em: 16 abr. 2024.\\
 \\
+4. AYITEY JUNIOR, M.; APPIAHENE, P.; APPIAH, O. Forex market forecasting with two-layer stacked Long Short-Term Memory neural network (LSTM) and correlation analysis. Journal of Electrical Systems & InformationTechnology, [s. l.], v. 9, n. 1, p. 1–24, 2022. DOI 10.1186/s43067-022-00054-1. Disponível em: https://research.ebsco.com/linkprocessor/plink?id=3ae68898-6167-3a7d-b0e4-b6873fa3640d. Acesso em: 16 abr. 2024.\\
+\\
+5. DR. PARAM JEET; PRASHANT VATS. Learning Quantitative Finance with R : Implement Machine Learning, Time-series Analysis, Algorithmic Trading and More. Birmingham, UNKNOWN: Packt Publishing, 2017. Disponível em: https://research.ebsco.com/linkprocessor/plink?id=c0bde38e-c20c-3a2f-a155-8dfdc269cedc. Acesso em: 16 abr. 2024.\\
+\\
+6. https://www.researchgate.net/profile/Sepideh-Naghshineh-Kani/publication/377924720_TURKISH_STOCK_MARKET_PREDICTION_USING_ARIMA_AND_LSTM_METHODS_AND_A_BRIEF_LITERATURE_REVIEW_OF_DEEP_REINFORCEMENT_LEARNING/links/65bd1f7034bbff5ba7e9ab5d/TURKISH-STOCK-MARKET-PREDICTION-USING-ARIMA-AND-LSTM-METHODS-AND-A-BRIEF-LITERATURE-REVIEW-OF-DEEP-REINFORCEMENT-LEARNING.pdf\\
+7. https://aws.amazon.com/what-is/neural-network/#:~:text=Artificial%20neural%20networks%20learn%20continuously,paths%20in%20the%20neural%20network.
+//
+8. https://www.simplilearn.com/tutorials/artificial-intelligence-tutorial/lstm#:~:text=LSTMs%20are%20able%20to%20process,problem%20that%20plagues%20traditional%20RNNs.
+\\
+9. https://www.investopedia.com/terms/a/autoregressive-integrated-moving-average-arima.asp\\
+10.https://www.sciencedirect.com/science/article/pii/S1877050922013382#:~:text=When%20predicting%2030%20days%2C%20ARIMA,2.1%20times%20better%20than%20LSTM.\\
+
+11. https://www.nasdaq.com/market-activity/stocks/ibm/historical
+
 \end{document}
+
+
+
